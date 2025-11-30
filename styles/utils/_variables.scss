@@ -1,0 +1,40 @@
+:root {
+  --color-bg: #000000;
+  --color-surface: rgba(14, 16, 36, 0.8);
+  --color-surface-strong: rgba(18, 20, 44, 0.95);
+  --color-primary: #c143f5;
+  --color-primary-strong: #ff47e0;
+  --color-accent: #5de4ff;
+  --color-text: #e9ebff;
+  --color-muted: #b9b9d9;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --glow-hero: 0 20px 80px rgba(193, 67, 245, 0.35),
+    0 0 120px rgba(93, 228, 255, 0.18);
+  --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.35),
+    0 10px 30px rgba(12, 12, 35, 0.35);
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --transition-fast: 180ms ease;
+  --transition-slow: 320ms ease;
+  --container-width: 1180px;
+  --gradient-cta: linear-gradient(135deg, #ff47e0 0%, #7b4bff 100%);
+  --gradient-surface: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+  --gradient-ring: conic-gradient(
+    from 0deg,
+    rgba(193, 67, 245, 0.6),
+    rgba(93, 228, 255, 0.28),
+    rgba(193, 67, 245, 0.6)
+  );
+}
+
+@media (max-width: 768px) {
+  :root {
+    --radius-lg: 20px;
+    --radius-md: 14px;
+  }
+}

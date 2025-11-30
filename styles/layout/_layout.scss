@@ -1,0 +1,99 @@
+.page {
+  position: relative;
+  background: radial-gradient(
+      circle at 10% 20%,
+      rgba(193, 67, 245, 0.1),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(93, 228, 255, 0.08),
+      transparent 24%
+    ),
+    #040515;
+  overflow-x: hidden;
+}
+
+.page__background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: url("../images/main-background.png") center/cover no-repeat,
+    radial-gradient(circle at 50% 40%, rgba(193, 67, 245, 0.1), transparent 36%),
+    radial-gradient(circle at 40% 70%, rgba(93, 228, 255, 0.06), transparent 40%),
+    #030414;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.page__noise {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  mix-blend-mode: screen;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.page__gradient {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(
+      circle at 10% 10%,
+      rgba(255, 255, 255, 0.03),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(255, 255, 255, 0.04),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 40% 70%,
+      rgba(255, 255, 255, 0.035),
+      transparent 48%
+    );
+  pointer-events: none;
+}
+
+.main {
+  position: relative;
+  z-index: 5;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.section-lead {
+  max-width: 720px;
+  color: var(--color-muted);
+  margin-bottom: 28px;
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 14px;
+  }
+}

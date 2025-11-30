@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <link rel="shortcut icon" href="/images/logo.png" type="image/png">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1Z6lrJHfq91PqS3WBiVtD0V0C5eU5Nn0O7C2JZ9Wj9mQXh5cZ8Qg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body class="page">
+  <div class="page__background"></div>
+  <div class="page__noise"></div>
+  <div class="page__gradient"></div>
+
+  <%- include("partials/header") %>
+
+  <main class="main">
+    <section class="hero" id="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1 class="hero__title" data-text="MantiQ — магические мероприятия нового поколения">MantiQ — магические мероприятия нового поколения</h1>
+          <p class="hero__subtitle">
+            Живые эзотерические встречи с интерактивами, которые помогут вам по-новому взглянуть на себя и свою жизнь.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#events">Ближайшее событие</a>
+            <a class="button button--ghost" href="#about">О нас</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero-card">
+            <div class="hero-card__image">
+              <img src="/images/matiman1.png" alt="Магическое действие MantiQ">
+              <div class="hero-card__glow"></div>
+            </div>
+          </div>
+          <ul class="hero-icons">
+            <li class="hero-icon hero-icon--top">
+              <img src="/images/free-icon-magic-6489276.png" alt="">
+            </li>
+            <li class="hero-icon hero-icon--right">
+              <img src="/images/free-icon-magic-8381626.png" alt="">
+            </li>
+            <li class="hero-icon hero-icon--bottom">
+              <img src="/images/free-icon-spellbook-10431724.png" alt="">
+            </li>
+            <li class="hero-icon hero-icon--left">
+              <img src="/images/free-icon-tarot-1408470.png" alt="">
+            </li>
+          </ul>
+          <div class="hero__orb hero__orb--pink"></div>
+          <div class="hero__orb hero__orb--blue"></div>
+          <div class="hero__stars"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__card">
+          <div class="about__flare"></div>
+          <div>
+            <h2 class="section-title">MantiQ — магические мероприятия нового поколения</h2>
+            <p class="about__text about__highlight">
+              Мы создаём камерные эзотерические встречи с таро, астрологией и ритуалами, где каждый гость становится участником истории через интерактивы и мини-практики.
+            </p>
+            <p class="about__text">
+              Наша цель — дать людям безопасное и уютное пространство, где можно остановиться, задать себе важные вопросы и увидеть свою жизнь под новым углом.
+            </p>
+            <p class="about__text">
+              MantiQ помогает соединить рациональное мышление с интуицией, чтобы уходить с мероприятий с ясностью, вдохновением и ощущением опоры.
+            </p>
+          </div>
+          <div class="about__gallery">
+            <div class="about__image">
+              <img src="/images/about-image1.jpg" alt="Закулисье события MantiQ">
+            </div>
+            <div class="about__image">
+              <img src="/images/about-image2.jpg" alt="Атмосфера свечей">
+            </div>
+            <div class="about__image">
+              <img src="/images/about-image3.jpg" alt="Декорации">
+            </div>
+            <div class="about__image">
+              <img src="/images/about-image4.jpg" alt="Магический образ">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="events" id="events">
+      <div class="container">
+        <h2 class="section-title">Ближайшие встречи</h2>
+        <p class="section-lead">Выбирайте формат, который откликнется — творчество, кино, ритуалы и живое общение в атмосфере MantiQ.</p>
+
+        <div class="events__wrapper">
+          <article class="events__card">
+            <div class="events__glow"></div>
+            <div class="events__image">
+              <img src="/images/event-placeholder.jpg" alt="Событие MantiQ">
+            </div>
+            <div class="events__badge">Ритуал &amp; творчество</div>
+            <h3 class="events__title">Мастер-класс «Свеча судьбы»</h3>
+            <div class="events__meta">6 декабря · 17:00</div>
+            <p class="events__text">
+              Создайте свою свечу с личным намерением — любовь, здоровье или изобилие. Выбираем аромат и запечатываем желание в воске.
+            </p>
+            <a class="events__cta" role="button" href="javascript:void(0)" data-open-modal data-event="Мастер-класс «Свеча судьбы»">Записаться</a>
+            <a class="events__cta events__cta--ghost" role="button" href="javascript:void(0)" data-open-details data-event="Мастер-класс «Свеча судьбы»" data-desc="Создайте свою свечу с личным намерением — любовь, здоровье или изобилие. Выбираем аромат и запечатываем желание в воске.">Подробнее</a>
+          </article>
+
+          <article class="events__card">
+            <div class="events__glow"></div>
+            <div class="events__image">
+              <img src="/images/event-placeholder.jpg" alt="Событие MantiQ">
+            </div>
+            <div class="events__badge">Атмосфера</div>
+            <h3 class="events__title">Киновечер с MantiQ</h3>
+            <div class="events__meta">11 декабря · 19:00</div>
+            <p class="events__text">
+              Погрузитесь в магию фильма «Рождественская история» — уютный просмотр, разговоры про интуицию и желания, горячий чай и свечи.
+            </p>
+            <a class="events__cta" role="button" href="javascript:void(0)" data-open-modal data-event="Киновечер с MantiQ">Записаться</a>
+            <a class="events__cta events__cta--ghost" role="button" href="javascript:void(0)" data-open-details data-event="Киновечер с MantiQ" data-desc="Погрузитесь в магию фильма «Рождественская история» — уютный просмотр, разговоры про интуицию и желания, горячий чай и свечи.">Подробнее</a>
+          </article>
+
+          <article class="events__card">
+            <div class="events__glow"></div>
+            <div class="events__image">
+              <img src="/images/event-placeholder.jpg" alt="Событие MantiQ">
+            </div>
+            <div class="events__badge">Скоро</div>
+            <h3 class="events__title">Новая встреча в разработке</h3>
+            <div class="events__meta">Дата уточняется</div>
+            <p class="events__text">
+              Следим за новыми темами: от астрологических разборов до ночей ритуалов и таро. Оставьте контакты — сообщим первыми.
+            </p>
+            <a class="events__cta" role="button" href="javascript:void(0)" data-open-modal data-event="Новая встреча в разработке">Оставить заявку</a>
+            <a class="events__cta events__cta--ghost" role="button" href="javascript:void(0)" data-open-details data-event="Новая встреча в разработке" data-desc="Следим за новыми темами: от астрологических разборов до ночей ритуалов и таро. Оставьте контакты — сообщим первыми.">Подробнее</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <%- include("partials/modal") %>
+  <script src="/scripts/main.js"></script>
+  <%- include("partials/footer") %>
+</body>
+</html>

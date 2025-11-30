@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Админка — заявки</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>
+    body { background: #0b0d1f; color: #e9ebff; }
+    .admin-wrapper { max-width: 1200px; margin: 30px auto; padding: 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: left; }
+    th { color: #5de4ff; }
+    tr:hover { background: rgba(255,255,255,0.04); }
+  </style>
+</head>
+<body>
+  <div class="admin-wrapper">
+    <h1>Заявки</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Событие</th>
+          <th>Фамилия</th>
+          <th>Имя</th>
+          <th>Отчество</th>
+          <th>Телефон</th>
+          <th>Статус</th>
+          <th>Создана</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (bookings.length === 0) { %>
+          <tr><td colspan="8">Нет заявок</td></tr>
+        <% } %>
+        <% bookings.forEach(b => { %>
+          <tr>
+            <td><%= b.id %></td>
+            <td><%= b.eventTitle %></td>
+            <td><%= b.lastName %></td>
+            <td><%= b.firstName %></td>
+            <td><%= b.middleName || "" %></td>
+            <td><%= b.phone %></td>
+            <td><%= b.status %></td>
+            <td><%= b.createdAt.toISOString() %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

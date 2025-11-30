@@ -1,0 +1,133 @@
+.footer {
+  padding: 50px 0 70px;
+  background: radial-gradient(circle at 10% 20%, rgba(193, 67, 245, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(93, 228, 255, 0.08), transparent 45%),
+    #0a0c22;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 6;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.9fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.footer__brand .brand__logo {
+  width: 56px;
+  height: 56px;
+}
+
+.footer__text {
+  max-width: 520px;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.footer__contacts {
+  display: grid;
+  gap: 6px;
+  color: var(--color-text);
+}
+
+.footer__contacts a {
+  color: #fff;
+}
+
+.footer__socials {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.footer__label {
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer__links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer__link {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  transition: transform var(--transition-fast), border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.footer__link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(193, 67, 245, 0.25);
+}
+
+.footer__cta {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer__tg {
+  min-width: 240px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(193, 67, 245, 0.35);
+}
+
+@media (max-width: 992px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "brand socials"
+      "cta cta";
+    gap: 20px;
+  }
+
+  .footer__grid > div:first-child {
+    grid-area: brand;
+  }
+
+  .footer__socials {
+    grid-area: socials;
+    justify-items: start;
+  }
+
+  .footer__cta {
+    grid-area: cta;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "socials"
+      "cta";
+  }
+
+  .footer__cta {
+    justify-content: stretch;
+  }
+
+  .footer__tg {
+    width: 100%;
+  }
+}

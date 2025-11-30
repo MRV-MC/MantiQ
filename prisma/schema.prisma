@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Booking {
+  id         Int      @id @default(autoincrement())
+  eventTitle String
+  lastName   String
+  firstName  String
+  middleName String?
+  phone      String
+  status     String   @default("pending")
+  createdAt  DateTime @default(now())
+
+  payments   Payment[]
+}
+
+model Payment {
+  id              Int       @id @default(autoincrement())
+  booking         Booking   @relation(fields: [bookingId], references: [id])
+  bookingId       Int
+  amount          Decimal
+  currency        String    @default("RUB")
+  status          String    @default("pending")
+  providerId      String?   // ID платежа в ЮMoney
+  confirmationUrl String?   // Ссылка для оплаты
+  paidAt          DateTime?
+  createdAt       DateTime  @default(now())
+}
