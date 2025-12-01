@@ -1,0 +1,75 @@
+.admin-wrapper {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  color: #e9ebff;
+}
+
+.admin-section {
+  margin-top: 24px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-section form {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.admin-section label {
+  display: grid;
+  gap: 4px;
+  color: #e9ebff;
+}
+
+.admin-section input[type="text"],
+.admin-section input[type="number"],
+.admin-section textarea,
+.admin-section input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.admin-section textarea {
+  resize: vertical;
+}
+
+.admin-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+.admin-table th {
+  color: #5de4ff;
+  cursor: pointer;
+}
+
+.admin-table tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hidden {
+  display: none;
+}

@@ -1,6 +1,14 @@
 .hero {
   padding: 70px 0 80px;
   position: relative;
+
+ @media (max-width: 1100px) {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 }
 
 .hero__grid {
@@ -64,11 +72,14 @@
   position: relative;
   display: grid;
   place-items: center;
+  justify-self: center;
+  width: 100%;
+  max-width: 520px;
 }
 
 .hero-card {
   width: 100%;
-  max-width: 500px;
+  max-width: 520px;
   aspect-ratio: 1 / 1;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -160,6 +171,7 @@
     radial-gradient(2px 2px at 30% 60%, #fff, transparent);
   opacity: 0.7;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .hero-icons {
@@ -305,4 +317,13 @@ filter: brightness(86%) hue-rotate(10deg) saturate(305%) opacity(84%) contrast(5
   .hero__actions {
     flex-direction: column;
   }
+
+  .hero__title {
+    font-size: 34px;
+  }
+
+  .hero__subtitle {
+    font-size: 15px;
+  }
 }
+

@@ -6,6 +6,8 @@
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
   z-index: 6;
+
+
 }
 
 .footer__grid {
@@ -13,6 +15,7 @@
   grid-template-columns: 1.4fr 1fr 0.9fr;
   gap: 24px;
   align-items: center;
+  position: relative;
 }
 
 .footer__brand {
@@ -25,6 +28,7 @@
 .footer__brand .brand__logo {
   width: 56px;
   height: 56px;
+  margin-left: 6px;
 }
 
 .footer__text {
@@ -52,6 +56,7 @@
 .footer__label {
   font-weight: 700;
   color: #fff;
+  text-align: start;
 }
 
 .footer__links {
@@ -105,12 +110,14 @@
 
   .footer__socials {
     grid-area: socials;
-    justify-items: start;
+    justify-items: center;
+    text-align: center;
   }
 
   .footer__cta {
     grid-area: cta;
     justify-content: flex-start;
+    margin-top: 6px;
   }
 }
 
@@ -121,6 +128,14 @@
       "brand"
       "socials"
       "cta";
+    gap: 16px;
+  }
+
+  .footer__text,
+  .footer__contacts,
+  .footer__label,
+  .footer__brand {
+    text-align: left;
   }
 
   .footer__cta {

@@ -10,6 +10,8 @@ datasource db {
 model Booking {
   id         Int      @id @default(autoincrement())
   eventTitle String
+  eventDesc  String?
+  eventImage String?
   lastName   String
   firstName  String
   middleName String?
@@ -27,8 +29,37 @@ model Payment {
   amount          Decimal
   currency        String    @default("RUB")
   status          String    @default("pending")
-  providerId      String?   // ID платежа в ЮMoney
-  confirmationUrl String?   // Ссылка для оплаты
+  providerId      String?
+  confirmationUrl String?
   paidAt          DateTime?
   createdAt       DateTime  @default(now())
+}
+
+model Event {
+  id          Int      @id @default(autoincrement())
+  title       String
+  dateMeta    String
+  description String
+  amount      Int      @default(0)
+  image       String?
+  details     String?
+  tags        String?
+  createdAt   DateTime @default(now())
+}
+
+model HeroContent {
+  id    Int    @id @default(1)
+  image String?
+}
+
+model AboutContent {
+  id        Int    @id @default(1)
+  highlight String?
+  body1     String?
+  body2     String?
+  body3     String?
+  image1    String?
+  image2    String?
+  image3    String?
+  image4    String?
 }

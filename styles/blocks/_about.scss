@@ -41,6 +41,8 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.04);
+  cursor: zoom-in;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .about__image img {
@@ -70,6 +72,11 @@
   opacity: 0.6;
 }
 
+.about__image:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
 .about__flare {
   position: absolute;
   inset: -10%;
@@ -92,5 +99,9 @@
 @media (max-width: 640px) {
   .about__card {
     padding: 22px;
+  }
+
+  .about__gallery {
+    grid-auto-rows: 140px;
   }
 }

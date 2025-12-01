@@ -2,11 +2,7 @@
 // Нужно заполнить переменные окружения и заменить createPayment на реальный вызов.
 
 const createPayment = async ({ amount, description, metadata }) => {
-  const {
-    YOOMONEY_SHOP_ID,
-    YOOMONEY_SECRET,
-    PAYMENT_RETURN_URL = "http://localhost:3000",
-  } = process.env;
+  const { YOOMONEY_SHOP_ID, YOOMONEY_SECRET, PAYMENT_RETURN_URL = "/" } = process.env;
 
   if (!YOOMONEY_SHOP_ID || !YOOMONEY_SECRET) {
     console.warn("YOOMONEY credentials are not set. Returning mock URL.");

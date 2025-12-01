@@ -6,6 +6,7 @@
     <p class="modal__lead" id="bookingEventLabel">Событие</p>
     <form class="modal__form" id="bookingForm">
       <input type="hidden" name="eventTitle" id="bookingEvent" value="">
+      <input type="hidden" name="amount" id="bookingAmount" value="">
       <label class="modal__label">
         <span>Фамилия</span>
         <input class="modal__input" type="text" name="lastName" required>
@@ -20,20 +21,41 @@
       </label>
       <label class="modal__label">
         <span>Телефон</span>
-        <input class="modal__input" type="tel" name="phone" required placeholder="+7 900 000 00 00">
+        <input
+          class="modal__input"
+          type="tel"
+          name="phone"
+          required
+          placeholder="+7 900 000 00 00"
+          pattern="\\+?\\d[\\d\\s\\-\\(\\)]{9,}"
+          inputmode="tel"
+        >
       </label>
       <button class="button button--primary modal__submit" type="submit">Продолжить к оплате</button>
-      <p class="modal__hint">Вы соглашаетесь на обработку данных и т.д.</p>
+      <p class="modal__hint">После отправки откроется оплата через ЮMoney, а заявка сохранится в базе.</p>
     </form>
   </div>
 </div>
 
-<div class="modal" id="detailsModal" aria-hidden="true">
+<div class="modal modal--details" id="detailsModal" aria-hidden="true">
   <div class="modal__overlay" data-modal-close></div>
   <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="detailsModalTitle">
     <button class="modal__close" type="button" data-modal-close aria-label="Закрыть описание">×</button>
     <h3 class="modal__title" id="detailsModalTitle">Событие</h3>
     <p class="modal__lead" id="detailsModalDesc">Описание события</p>
+    <div class="modal__media">
+      <img id="detailsModalImage" src="/images/event-placeholder.jpg" alt="Событие MantiQ">
+    </div>
     <button class="button button--primary modal__submit" type="button" data-open-modal>Записаться</button>
+  </div>
+</div>
+
+<div class="modal modal--details" id="aboutImageModal" aria-hidden="true">
+  <div class="modal__overlay" data-modal-close></div>
+  <div class="modal__dialog" role="dialog" aria-modal="true">
+    <button class="modal__close" type="button" data-modal-close aria-label="Закрыть изображение">×</button>
+    <div class="modal__media">
+      <img id="aboutModalImage" src="" alt="Изображение о нас">
+    </div>
   </div>
 </div>

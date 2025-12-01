@@ -1,0 +1,25 @@
+<section class="admin-section">
+  <h2>Управление событиями</h2>
+  <p>Добавление/редактирование карточек (требует реализации на сервере).</p>
+  <form>
+    <label>Название события
+      <input type="text" placeholder="Мастер-класс «Свеча судьбы»">
+    </label>
+    <label>Дата и время
+      <input type="text" placeholder="6 декабря · 17:00">
+    </label>
+    <label>Описание
+      <textarea rows="4" placeholder="Создайте свою свечу с личным намерением..."></textarea>
+    </label>
+    <label>Стоимость (руб)
+      <input type="number" min="0" step="1" placeholder="1500">
+    </label>
+    <label>Изображение карточки
+      <input type="file" accept="image/*">
+    </label>
+    <label>Описание для модального окна
+      <textarea rows="3" placeholder="Детальное описание события"></textarea>
+    </label>
+    <button class="button button--primary" type="button">Сохранить (требует бэкенд)</button>
+  </form>
+</section>

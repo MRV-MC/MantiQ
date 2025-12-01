@@ -27,6 +27,7 @@
   border-radius: var(--radius-lg);
   padding: 28px;
   z-index: 1;
+  animation: modal-pop 200ms ease;
 }
 
 .modal__close {
@@ -84,6 +85,7 @@
 
 .modal--details .modal__submit {
   width: auto;
+  margin-top: 10px;
 }
 
 .modal__hint {
@@ -92,8 +94,67 @@
   font-size: 14px;
 }
 
+.modal__media {
+  margin: 10px 0 4px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.modal__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 @media (max-width: 480px) {
   .modal__dialog {
     padding: 22px;
+  }
+
+  .modal__title {
+    font-size: 20px;
+  }
+
+  .modal__lead {
+    font-size: 14px;
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+/* Fullscreen image modal for "О нас" */
+#aboutImageModal .modal__dialog {
+  width: min(90vw, 1000px);
+  padding: 0;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#aboutImageModal .modal__media {
+  margin: 0;
+  border: none;
+  background: transparent;
+}
+
+#aboutImageModal img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+@keyframes modal-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }

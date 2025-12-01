@@ -28,7 +28,7 @@
 }
 
 .events__image {
-  height: 180px;
+  height: 440px;
   background: rgba(255, 255, 255, 0.04);
   border-bottom: 1px solid var(--color-border);
 }
@@ -43,20 +43,11 @@
 .events__card > *:not(.events__image):not(.events__glow) {
   padding-left: 20px;
   padding-right: 20px;
+      margin-top: 15px;
 }
 
 .events__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
-  font-weight: 600;
-  font-size: 13px;
-  margin-bottom: 10px;
+  display: none;
 }
 
 .events__title {
@@ -110,4 +101,29 @@
 
 .events__card:hover .events__glow {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .events__image {
+    height: 150px;
+  }
+
+  .events__card > *:not(.events__image):not(.events__glow) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .events__cta {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 520px) {
+  .events__image {
+    height: 130px;
+  }
+
+  .events__wrapper {
+    gap: 14px;
+  }
 }
